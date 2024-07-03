@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+@font-face {
+    font-family: 'Arial Unicode MS';
+    src: url('path/to/arial-unicode-ms.woff2') format('woff2'),
+         url('path/to/arial-unicode-ms.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+height: 100%;
+margin: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E6EBE8;
+}
+
+
+.container {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1200px; 
+}
+
+.left-side {
+    flex: 5; 
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-side {
+    flex: 1;
+    background-color: #195905;
+    box-sizing: border-box;
+    padding: 21%; 
+    height: 100%; 
+    width:100%;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"]  {
+    border-radius: 20px; 
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+input[type="submit"] {
+    background-color: #195905; 
+    color: white;
+    width: 50%;
+    box-sizing: border-box; 
+    display: inline-block;
+    padding: 10px; 
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 0 25%;
+    border: 0;
+    outline: none;
+    font-family: sans-serif;
+}
+
+a.register-button{
+    background-color: #3E4040; 
+    color: white;
+    width: 50%;
+    margin: 0 25%;
+    box-sizing: border-box; 
+    display: inline-block;
+    padding: 10px; 
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-family: sans-serif;
+}
+
+a.forgot-password {
+    color: #67696B; 
+    text-decoration: none;
+    font-size: 10px;
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+
+img {
+    max-width: 15%; 
+    height: auto;
+    margin-bottom: 5px; 
+}
+
+h3 {
+    text-align: center; 
+    font-size: 30px;
+    margin-bottom: 1%;
+    color: #67696B;
+    font-family: 'Arial Unicode MS', sans-serif;
+}
+
+p{
+    margin-top: 1%;
+    color: #67696B;
+    font-family: sans-serif;
+}
+form {
+    width: 60%; 
+}
+
+.separator {
+    background-color: #4c7e3e; 
+    width: 70px; 
+    height: 100%; 
+    position: absolute; 
+    top: 0;
+    left: 53.5%;
+    z-index: 2;
+}
+
+.vertical-box {
+    background-color: #7fa276; 
+    width: 20px; 
+    height: 100%; 
+    position: absolute; 
+    top: 0;
+    left: 51%;
+    z-index: 2;
+}
+
+.truth{
+    position: absolute;
+    top: 1%;
+    left: 12%;
+    font-size: 4rem;
+    color:#a5941b;
+    font-family: 'Anton', sans-serif;
+}
+
+.excellence{
+    position: absolute;
+    top: 16%;
+    left: 12%;
+    font-size: 4rem;
+    color:#a5941b;
+    font-family: 'Anton', sans-serif;
+}
+
+.service{
+    position: absolute;
+    top: 32%;
+    left: 12%;
+    font-size: 4rem;
+    color:#a5941b;
+    font-family: 'Anton', sans-serif;
+}
+
+.Statue {
+    max-width: 80%;
+    height: 70%;
+    position: absolute;
+    top: 65%;
+    left: 77%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+
+/*Responsiveness*/
+@media only screen and (max-width: 1128px) {
+    .vertical-box{
+        background-color: unset; 
+        width: unset; 
+        height: unset; 
+        position: unset; 
+    }
+
+    .separator{
+        background-color: unset; 
+        width: unset; 
+        height: unset; 
+        position: unset; 
+    }
+
+    .right-side{
+        flex: 1;
+        background-color: unset;
+        box-sizing: unset;
+        padding: unset; 
+        height: unset; 
+        width:unset;
+    }
+}
+
+/*Animation*/
+@keyframes moveUp {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.right-side,.vertical-box, form, .logo, h3, p{
+    animation: moveUp 2s ease-out; 
+}
+
+button{
+    margin-left: 36%;
+    background-color: #195905;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover{
+    background-color: #000;
+}
+
+button:active{
+    transform: scale(0.98);
+    transition: 0s;
+    background-color: #a5941b;
+}
